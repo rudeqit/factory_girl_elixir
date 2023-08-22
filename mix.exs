@@ -2,20 +2,21 @@ defmodule FactoryGirlElixir.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :factory_girl_elixir,
-     version: "0.1.1",
-     elixir: "~> 1.0",
-     description: description,
-     package: package,
-     deps: deps]
+    [
+      app: :factory_girl_elixir,
+      version: "0.1.1",
+      elixir: "~> 1.0",
+      description: description(),
+      package: package(),
+      deps: deps()
+    ]
   end
 
   # Configuration for the OTP application
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [],
-     mod: {FactoryGirlElixir, []}]
+    [applications: [], mod: {FactoryGirlElixir, []}]
   end
 
   # Dependencies can be hex.pm packages:
@@ -38,8 +39,10 @@ defmodule FactoryGirlElixir.Mixfile do
   end
 
   defp package do
-    [contributors: ["Duilio Ruggiero"],
-     licenses: ["MIT"],
-     links: %{github: "https://github.com/sinetris/factory_girl_elixir"}]
+    [
+      contributors: ["Duilio Ruggiero"],
+      licenses: ["MIT"],
+      links: %{github: "https://github.com/sinetris/factory_girl_elixir"}
+    ]
   end
 end
